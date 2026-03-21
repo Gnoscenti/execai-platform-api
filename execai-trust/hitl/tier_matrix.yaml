@@ -1,0 +1,16 @@
+tiers:
+  tier_1:
+    description: High risk actions
+    examples:
+      - wire_transfer
+      - legal_commitment
+    approval: required
+    reviewers: 2
+
+  tier_2:
+    description: Medium risk actions
+    approval: optional
+
+  tier_3:
+    description: Low risk actions
+    approval: none
