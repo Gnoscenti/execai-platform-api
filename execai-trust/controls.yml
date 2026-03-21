@@ -1,0 +1,58 @@
+version: 1
+
+controls:
+  - id: DL-1
+    name: Data Lineage
+    objective: Track origin, license, and sensitivity classification of all data used for training or inference.
+    evidence:
+      - data/lineage_log.csv
+      - data/dpia_summary.md
+      - data/dsr_report.md
+    kpis:
+      coverage_pct: ">= 99.5"
+      stale_records_pct: "<= 0.5"
+
+  - id: SEC-2
+    name: Redaction and Minimization
+    objective: Remove or mask sensitive data before model exposure.
+    evidence:
+      - ci/redaction_eval.json
+      - ci/secrets_scan.log
+    thresholds:
+      precision: 0.99
+      recall: 0.99
+
+  - id: VAL-3
+    name: Model Validation
+    objective: Validate accuracy, fairness, and safety before deployment.
+    evidence:
+      - models/model_card.md
+      - models/validation_report.md
+
+  - id: OPS-4
+    name: Drift Monitoring
+    objective: Detect post-deployment degradation and trigger review or rollback.
+    evidence:
+      - models/drift_metrics.json
+
+  - id: HITL-5
+    name: Human Oversight
+    objective: Require human review for high-risk actions.
+    evidence:
+      - hitl/tier_matrix.yaml
+      - hitl/approvals_sample.csv
+
+  - id: ATT-6
+    name: Attestation
+    objective: Produce tamper-evident deployment and action proofs.
+    evidence:
+      - attest/deploy_attestation.json
+      - attest/verify_log.txt
+
+  - id: SAFE-7
+    name: Guardrails
+    objective: Enforce deterministic policy boundaries for unsafe or unauthorized behavior.
+    evidence:
+      - guardrails/policy_engine_rules.yaml
+      - guardrails/injection_tests.json
+      - guardrails/exfiltration_tests.json
