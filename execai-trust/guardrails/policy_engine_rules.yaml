@@ -1,0 +1,12 @@
+rules:
+  - id: NO_PII_EXFIL
+    description: Prevent leakage of sensitive personal data
+    action: block
+
+  - id: FINANCIAL_APPROVAL
+    description: Require human approval for financial actions
+    action: route_to_hitl
+
+  - id: PROMPT_INJECTION
+    description: Detect malicious or adversarial prompts
+    action: block_and_log
