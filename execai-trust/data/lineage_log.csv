@@ -1,0 +1,5 @@
+dataset_id,source_uri,license,pii_flag,hash,ingested_at
+DS-001,s3://execai/contracts/contracts_2026_q1.csv,internal,true,ab12cd34ef56aa01,2026-03-01T09:15:00Z
+DS-002,s3://execai/finance/vendor_master.csv,internal,true,cd34ef56ab12bb02,2026-03-03T14:40:00Z
+DS-003,https://data.cityofnewyork.us,open,false,ef56ab12cd34cc03,2026-03-05T18:05:00Z
+DS-004,s3://execai/product/feature_flags.json,internal,false,1234abcd5678dd04,2026-03-08T07:22:00Z
