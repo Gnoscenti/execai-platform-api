@@ -1,0 +1,13 @@
+{
+  "events": [
+    {
+      "attestation_id": "att_44ab",
+      "flag": "duplicate_invoice",
+      "severity": "high",
+      "causes": ["missing_duplicate_check"],
+      "patches": ["patch_dup_check"],
+      "resolution_time": "2h 14m",
+      "timestamp": "2026-03-23T20:00:00Z"
+    }
+  ]
+}
