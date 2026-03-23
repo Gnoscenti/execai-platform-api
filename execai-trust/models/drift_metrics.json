@@ -1,0 +1,8 @@
+{
+  "model": "ExecAI Decision Engine v1",
+  "baseline_accuracy": 0.943,
+  "current_accuracy": 0.918,
+  "drift_score": 0.025,
+  "last_evaluated": "2026-03-20T12:00:00Z",
+  "status": "monitor"
+}
